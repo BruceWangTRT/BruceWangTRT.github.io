@@ -18,7 +18,8 @@ twitter_username:
 use_math: 
 
 # Everything below here can be ignored, unless you want to change the theme entirely
-theme: jekyll-theme-midnight
+# theme: jekyll-theme-midnight
+theme: minima
 plugins:
   - jekyll-feed
   - jekyll-gist
