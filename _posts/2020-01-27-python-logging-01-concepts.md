@@ -1,13 +1,12 @@
+---
+categories: [python]
+tags: [python, logging]
+---
+
 # Python Logging 01 Concepts
 
-There is a logging module in Python standard library.
-And the Python org has great documemtations about it [here](https://docs.python.org/3/library/logging.html).
-The following contents are mostly my digest.
-Let's start with basic concepts.
-There are few major concepts in logging standard library:
+We will learn these important concepts:
 **severity level**, **logger**, **handler**, **filter**, **formatter**, **LogRecord**.
-
-Table of contents:
 
 1. TOC
 {:toc}
@@ -70,9 +69,13 @@ True
 
 Loggers have a concept of effective level. If a level is not explicitly set on a logger, the level of its parent is used instead as its effective level. This happens recusively until it reaches the root logger, which always has an explicit level set (`WARNING` by default).
 
+Read more on Logger [here](https://docs.python.org/3/library/logging.html#logger-objects).
+
 # LogRecord
 
 Logging messages are encoded as instances of the LogRecord class. When a logger decides to actually log an event, a LogRecord instance is created from the logging message. Log event information is passed between loggers, handlers, filters and formatters in LogRecord instances. 
+
+Read more on LogRecord [here](https://docs.python.org/3/library/logging.html#logrecord-objects).
 
 # handler
 
@@ -96,9 +99,17 @@ logger.error('error message')
 
 The standard library includes quite a few handler types (see [Useful Handlers](https://docs.python.org/3/howto/logging.html#useful-handlers))
 
+Read more on Handler [here](https://docs.python.org/3/library/logging.html#handler-objects).
+
 # filter
 
-Filters can be used by handlers and loggers for more sophisticated filtering than is provided by levels. See details below.
+Filters can be used by handlers and loggers for more sophisticated filtering than is provided by levels. 
+
+Each filter is passed an instance of LogRecord and returns zero for no, nonzero for yes. Any instance which has a `filter()` method that takes one positional argument can be a filter. 
+
+Although filters are used primarily to filter records based on more sophisticated criteria than levels, they get to see every record which is processed by the handler or logger they’re attached to: this can be useful if you want to do things like counting how many records were processed by a particular logger or handler, or even in-place modifing the LogRecord being processed. Obviously changing the LogRecord needs to be done with some care, but it does allow the injection of contextual information into logs. 
+
+Read more on Filter [here](https://docs.python.org/3/library/logging.html#filter-objects).
 
 # formatter
 
@@ -126,3 +137,5 @@ logger.addHandler(ch)
 logger.critical('critical message')
 ```
     2005-03-19 15:10:26,773 - simple_example - CRITICAL - critical message
+
+Read more on Formatter [here](https://docs.python.org/3/library/logging.html#formatter-objects).
