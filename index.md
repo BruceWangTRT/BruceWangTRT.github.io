@@ -1,17 +1,7 @@
----
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+Hello and welcome to this blog. Edit the `index.md` file to change this content. All pages on the blog, including this one, use [Markdown](https://guides.github.com/features/mastering-markdown/). You can include images:
 
-layout: home
-search: exclude
----
+![Image of fast.ai logo](images/logo.png)
 
-This site is built with [fastpages](https://github.com/fastai/fastpages), An easy to use blogging platform with extra features for Jupyter Notebooks.
+## This is a title
 
-![](images/diagram.png "https://github.com/fastai/fastpages")
-
-[fastpages](https://github.com/fastai/fastpages) automates the process of creating blog posts via GitHub Actions, so you don't have to fuss with conversion scripts.  A full list of features can be found on [GitHub](https://github.com/fastai/fastpages).  
-
-You can edit the `index.md` file to change this content.
-
-# Posts
+And you can include links, like this [link to fast.ai](https://www.fast.ai). Posts will appear after this file. 
