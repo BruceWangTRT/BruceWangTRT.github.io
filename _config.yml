@@ -66,6 +66,7 @@ exclude:
 
 # Everything below here should be left alone. Modifications may break fastpages
 future: true
+# Everything below here can be ignored, unless you want to change the theme entirely
 theme: minima
 plugins:
   - jekyll-feed
